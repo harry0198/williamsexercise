@@ -26,6 +26,7 @@ class DriverMapperTest {
         mappings.put(DriverMapper.DRIVER_DOB_HEADER, 6);
         mappings.put(DriverMapper.DRIVER_NATIONALITY_HEADER, 7);
         mappings.put(DriverMapper.DRIVER_URL_HEADER, 8);
+
         String id = "1";
         String ref = "2";
         String num = "3";
@@ -41,6 +42,7 @@ class DriverMapperTest {
         // Act
         Driver driver = driverMapper.map(mappings, line);
 
+        // Assert
         assertNotNull(driver);
         assertEquals(id, driver.driverId().toString());
         assertEquals(ref, driver.driverRef());
@@ -52,5 +54,4 @@ class DriverMapperTest {
         assertEquals(nat, driver.nationality());
         assertEquals(url, driver.url());
     }
-
 }

@@ -8,6 +8,11 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import org.controlsfx.control.CheckComboBox?>
 <BorderPane xmlns:fx="http://javafx.com/fxml">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
@@ -15,11 +20,10 @@
 
   <top>
     <Label>Drivers</Label>
-    <HBox>
+    <HBox spacing="5" alignment="CENTER_LEFT">
       <Label>Surname Search</Label>
       <TextField fx:id="searchBox" promptText="E.g. Hamilton"/>
     </HBox>
-
   </top>
 
   <center>
@@ -38,15 +42,26 @@
   </center>
 
   <right>
-    <TableView fx:id="lapTimeTable">
-      <columns>
-        <TableColumn fx:id="raceIdCol" text="Race id"/>
-        <TableColumn fx:id="lapCol" text="Lap"/>
-        <TableColumn fx:id="posCol" text="Position"/>
-        <TableColumn fx:id="timeCol" text="Time"/>
-        <TableColumn fx:id="msCol" text="Ms"/>
-      </columns>
-    </TableView>
+    <VBox>
+      <CheckComboBox fx:id="raceSelect"/>
+      <LineChart fx:id="timingsChart">
+        <xAxis>
+          <NumberAxis side="BOTTOM"/>
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT"/>
+        </yAxis>
+      </LineChart>
+      <TableView fx:id="lapTimeTable">
+        <columns>
+          <TableColumn fx:id="raceIdCol" text="Race id"/>
+          <TableColumn fx:id="lapCol" text="Lap"/>
+          <TableColumn fx:id="posCol" text="Position"/>
+          <TableColumn fx:id="timeCol" text="Time"/>
+          <TableColumn fx:id="msCol" text="Ms"/>
+        </columns>
+      </TableView>
+    </VBox>
   </right>
 
 

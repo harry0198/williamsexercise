@@ -13,10 +13,12 @@ import me.harrydrummond.domain.LapTime;
 
 import java.io.IOException;
 
+// Entry point
 public class FXApplication extends Application {
 
     // The initial fxml file to load
     private static final String INITIAL_FXML = "main-view.fxml";
+
     @Override
     public void start(Stage stage) throws IOException {
         // Setup dependencies

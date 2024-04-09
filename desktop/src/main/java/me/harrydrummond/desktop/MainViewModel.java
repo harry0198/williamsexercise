@@ -9,6 +9,7 @@ import me.harrydrummond.domain.LapTime;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -62,6 +63,14 @@ public class MainViewModel {
         this.driverSubList.setAll(drivers.stream()
                 .filter(x -> x.surname().toLowerCase().contains(surname.toLowerCase()))
                 .collect(Collectors.toList()));
+    }
+
+    public Map<Integer, List<LapTime>> getLapTimesGroupedByRace(List<Integer> ids) {
+        return laptimes.stream().filter(x -> ids.contains(x.raceId())).collect(Collectors.groupingBy(LapTime::raceId));
+    }
+
+    public List<Integer> getRaceIds() {
+        return lapTimesListProperty().stream().map(LapTime::raceId).distinct().toList();
     }
 
     public List<Driver> getUnFilteredDrivers() {

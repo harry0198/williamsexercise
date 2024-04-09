@@ -1,8 +1,5 @@
 package me.harrydrummond.desktop.repository;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,11 +7,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+/**
+ * Contains functions for data access
+ * @param <T> object the repository uses to access / store.
+ */
 public abstract class Repository<T> {
 
     private static final String HOST = "http://localhost:8080";
     private final String endpoint;
 
+    /**
+     * Initializes the repository with an endpoint.
+     * @param endpoint Endpoint for the repository to use.
+     */
     public Repository(String endpoint) {
         this.endpoint = endpoint;
     }

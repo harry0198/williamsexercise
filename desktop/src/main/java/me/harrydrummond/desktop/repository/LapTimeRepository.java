@@ -36,7 +36,7 @@ public class LapTimeRepository extends Repository<LapTime> {
 
         try {
             // Make request with Id or null.
-            String content = request(id == null ? null :"id="+ id);
+            String content = request(id == null ? null : "id="+ id);
 
             // Deserialize JSON string into Java record
             ObjectMapper objectMapper = new ObjectMapper();

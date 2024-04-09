@@ -1,6 +1,7 @@
 module me.harrydrummond.desktop {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.controlsfx.controls;
     requires domain;
     requires com.fasterxml.jackson.databind;
 

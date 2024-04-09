@@ -32,7 +32,7 @@ public class DriverRepository extends Repository<Driver> {
 
             // Deserialize JSON string into Java record
             ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.readValue(content.toString(), new TypeReference<>() {});
+            return objectMapper.readValue(content, new TypeReference<>() {});
         } catch (IOException io) {
             System.out.println("Failed with error: " + io.getMessage()); // In prod would use better logging.
             return null;
