@@ -18,11 +18,19 @@ public class DriverController {
 
     private final DriverService driverService;
 
+    /**
+     * Constructor, initializes class.
+     * @param driverService Service to use to retrieve driver information.
+     */
     @Autowired
     public DriverController(DriverService driverService) {
         this.driverService = driverService;
     }
 
+    /**
+     * Get all drivers.
+     * @return All drivers.
+     */
     @GetMapping
     public List<Driver> getDrivers() {
         return driverService.getDrivers();

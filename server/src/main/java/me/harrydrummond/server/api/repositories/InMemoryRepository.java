@@ -17,7 +17,7 @@ public class InMemoryRepository<T> implements Repository<T> {
      * {@inheritDoc}
      */
     @Override
-    public void addDrivers(List<T> driverList) {
+    public void addAll(List<T> driverList) {
         this.storedData.addAll(driverList);
     }
 
@@ -25,7 +25,7 @@ public class InMemoryRepository<T> implements Repository<T> {
      * {@inheritDoc}
      */
     @Override
-    public List<T> getDrivers() {
+    public List<T> getAll() {
         return this.storedData;
     }
 }
