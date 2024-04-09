@@ -5,6 +5,7 @@ import me.harrydrummond.server.api.services.LapTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,11 +26,15 @@ public class LapTimeController {
     }
 
     /**
-     * Gets the laptimes.
-     * @return List of laptimes.
+     * Gets the laptimes for a driver id.
+     * @param id of driver.
+     * @return Lap times for the requested driver.
      */
-    @GetMapping
-    public List<LapTime> getLapTimes() {
-        return lapTimeService.getLapTimes();
+    @GetMapping()
+    public List<LapTime> getLapTimesForDriverId(@RequestParam(required = false) Integer id) {
+        if (id == null) {
+            return lapTimeService.getLapTimes();
+        }
+        return lapTimeService.getLapTimeForDriverId(id);
     }
 }

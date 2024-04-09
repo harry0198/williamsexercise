@@ -2,21 +2,17 @@ package me.harrydrummond.desktop.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import me.harrydrummond.domain.Driver;
+import me.harrydrummond.domain.LapTime;
 
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Access for the driver information.
- */
-public class DriverRepository extends Repository<Driver> {
+public class LapTimeRepository extends Repository<LapTime> {
 
     /**
-     * Initializes the repository.
-     * @param endpoint Endpoint to access (e.g. api/drivers)
+     * {@inheritDoc}
      */
-    public DriverRepository(String endpoint) {
+    public LapTimeRepository(String endpoint) {
         super(endpoint);
     }
 
@@ -26,13 +22,25 @@ public class DriverRepository extends Repository<Driver> {
      * @return List of drivers or null if could not make connection.
      * @throws IOException if an error occurred while trying to fetch.
      */
-    public List<Driver> get() {
+    @Override
+    public List<LapTime> get() {
+        return getForDriver(null);
+    }
+
+    /**
+     * Gets the latpimes for a driver.
+     * @param id
+     * @return
+     */
+    public List<LapTime> getForDriver(Integer id) {
+
         try {
-            String content = request(null);
+            // Make request with Id or null.
+            String content = request(id == null ? null :"id="+ id);
 
             // Deserialize JSON string into Java record
             ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.readValue(content.toString(), new TypeReference<>() {});
+            return objectMapper.readValue(content, new TypeReference<>() {});
         } catch (IOException io) {
             System.out.println("Failed with error: " + io.getMessage()); // In prod would use better logging.
             return null;

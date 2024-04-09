@@ -8,4 +8,6 @@ module me.harrydrummond.desktop {
     exports me.harrydrummond.desktop;
     exports me.harrydrummond.desktop.repository;
     opens me.harrydrummond.desktop.repository to javafx.fxml;
+    exports me.harrydrummond.desktop.utils;
+    opens me.harrydrummond.desktop.utils to javafx.fxml;
 }

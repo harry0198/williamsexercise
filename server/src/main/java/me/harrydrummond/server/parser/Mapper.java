@@ -2,8 +2,18 @@ package me.harrydrummond.server.parser;
 
 import java.util.Map;
 
+/**
+ * Signatures for mapping the csv to T
+ * @param <T> to map to.
+ */
 public interface Mapper<T> {
 
+    /**
+     * Map the given line to T
+     * @param headerToColumn header to column mappings in lineParts.
+     * @param lineParts The split csv line.
+     * @return The mapped line to T.
+     */
     T map(Map<String, Integer> headerToColumn, String[] lineParts);
 
     /**
@@ -21,26 +31,6 @@ public interface Mapper<T> {
             // column does not exist.
             return null;
         }
-    }
-
-    /**
-     * Get the double value associated to the given header or return null.
-     * @param headerToColumn Map containing the header string mappings to their columns.
-     * @param header Header to fetch value of.
-     * @param lineParts A single csv line split into each part.
-     * @return The double value from the provided header or null if does not exist.
-     */
-    static Double getDoubleValueWithHeaderOrNull(Map<String, Integer> headerToColumn, String header, String[] lineParts) {
-        String value = getStringValueWithHeaderOrNull(headerToColumn, header, lineParts);
-        if (value == null) return null;
-        double num;
-        try {
-            num = Double.parseDouble(value);
-        } catch (NumberFormatException nfe) {
-            return null;
-        }
-
-        return num;
     }
 
     /**

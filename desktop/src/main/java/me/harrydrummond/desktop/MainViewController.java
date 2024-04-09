@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import me.harrydrummond.domain.Driver;
+import me.harrydrummond.domain.LapTime;
 
 import java.util.List;
 
@@ -28,7 +29,17 @@ public class MainViewController {
     @FXML
     private TableColumn<Driver, String> urlCol;
     @FXML
-    private TableColumn<Driver, String> laptimeCol;
+    private TableColumn<LapTime, String> raceIdCol;
+    @FXML
+    private TableColumn<LapTime, String> lapCol;
+    @FXML
+    private TableColumn<LapTime, String> posCol;
+    @FXML
+    private TableColumn<LapTime, String> timeCol;
+    @FXML
+    private TableColumn<LapTime, String> msCol;
+    @FXML
+    private TableView<LapTime> lapTimeTable;
     @FXML
     private TableView<Driver> driverTable;
     private final MainViewModel viewModel;
@@ -48,6 +59,15 @@ public class MainViewController {
         nationalityCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nationality()));
         urlCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().url()));
 
+        raceIdCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().raceId() + ""));
+        lapCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().lap() + ""));
+        posCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().position() + ""));
+        timeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().time()));
+        msCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().milliseconds() + ""));
+
+        // On selection, update the laptimes.
+        driverTable.getSelectionModel().selectedItemProperty().addListener((obs, oldV, newV) -> viewModel.lapTimesForDriver(newV.driverId()));
+
         bindings();
         viewModel.fetchDrivers();
     }
@@ -55,5 +75,6 @@ public class MainViewController {
     private void bindings() {
         // Bind the items in the table to the viewmodel list.
         driverTable.setItems(viewModel.driverListProperty());
+        lapTimeTable.setItems(viewModel.lapTimesListProperty());
     }
 }

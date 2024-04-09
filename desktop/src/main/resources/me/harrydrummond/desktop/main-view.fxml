@@ -26,10 +26,21 @@
         <TableColumn fx:id="dobCol" text="DOB"/>
         <TableColumn fx:id="nationalityCol" text="Nationality"/>
         <TableColumn fx:id="urlCol" text="url"/>
-        <TableColumn fx:id="laptimeCol" text="LapTimes"/>
       </columns>
     </TableView>
   </center>
+
+  <right>
+    <TableView fx:id="lapTimeTable">
+      <columns>
+        <TableColumn fx:id="raceIdCol" text="Race id"/>
+        <TableColumn fx:id="lapCol" text="Lap"/>
+        <TableColumn fx:id="posCol" text="Position"/>
+        <TableColumn fx:id="timeCol" text="Time"/>
+        <TableColumn fx:id="msCol" text="Ms"/>
+      </columns>
+    </TableView>
+  </right>
 
 
 </BorderPane>
