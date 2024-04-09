@@ -19,7 +19,7 @@ class CsvParserTest {
      * Runs basic tests on first driver.
      */
     @Test
-    public void test_CsvParsesDrivers_Success() {
+    public void test_CsvParsesDrivers_IntegrationSuccess() {
         String csv = ResourceUtils.getResourceFileAsString("drivers.csv");
         CsvParser<Driver> driverCsvParser = new CsvParser<>(new DriverMapper());
 

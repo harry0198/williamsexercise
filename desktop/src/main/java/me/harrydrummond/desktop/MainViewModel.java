@@ -16,7 +16,9 @@ public class MainViewModel {
     private final Repository<Driver> driverRepository;
     private final LapTimeRepository lapTimeRepository;
     private List<Driver> drivers = new ArrayList<>();
-    private final ObservableList<Driver> driverList = FXCollections.observableArrayList();
+
+    // Drivers sublist (i.e. after filtering)
+    private final ObservableList<Driver> driverSubList = FXCollections.observableArrayList();
     private final ObservableList<LapTime> laptimes = FXCollections.observableArrayList();
 
     public MainViewModel(Repository<Driver> driverRepository, LapTimeRepository lapTimeRepository) {
@@ -33,7 +35,7 @@ public class MainViewModel {
         List<Driver> driverList = driverRepository.get();
         if (driverList != null) {
             this.drivers = driverList;
-            this.driverList.setAll(driverList);
+            this.driverSubList.setAll(driverList);
         }
     }
 
@@ -49,9 +51,13 @@ public class MainViewModel {
     }
 
     public void searchSurname(String surname) {
-        this.driverList.setAll(drivers.stream()
+        this.driverSubList.setAll(drivers.stream()
                 .filter(x -> x.surname().toLowerCase().contains(surname.toLowerCase()))
                 .collect(Collectors.toList()));
+    }
+
+    public List<Driver> getUnFilteredDrivers() {
+        return drivers;
     }
 
     public ObservableList<LapTime> lapTimesListProperty() {
@@ -59,6 +65,6 @@ public class MainViewModel {
     }
 
     public ObservableList<Driver> driverListProperty() {
-        return driverList;
+        return driverSubList;
     }
 }

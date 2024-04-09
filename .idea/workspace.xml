@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Laptimes added to frontend and api endpoint">
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" afterDir="false" />
+    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Added filtering">
+      <change afterPath="$PROJECT_DIR$/desktop/src/test/java/me/harrydrummond/desktop/MainViewModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/me/harrydrummond/server/parser/mappers/DriverMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/parser/mappers/DriverMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/parser/mappers/DriverMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +19,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="module-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,7 +52,9 @@
   "keyToString": {
     "Application.FXApplication.executor": "Run",
     "Application.HelloApplication.executor": "Run",
+    "JUnit.DriverMapperTest.testDriverMapsCSVLine.executor": "Run",
     "JUnit.DriverRequestTest.testDriverRequest.executor": "Run",
+    "JUnit.MainViewModelTest.searchSurname_Exists.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -83,10 +87,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="me.harrydrummond.server.parser.mappers" />
       <recent name="me.harrydrummond.desktop" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FXApplication">
+  <component name="RunManager" selected="JUnit.DriverMapperTest.testDriverMapsCSVLine">
     <configuration name="FXApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.harrydrummond.desktop.FXApplication" />
       <module name="desktop" />
@@ -96,6 +101,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverMapperTest.testDriverMapsCSVLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.harrydrummond.server.parser.mappers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.harrydrummond.server.parser.mappers" />
+      <option name="MAIN_CLASS_NAME" value="me.harrydrummond.server.parser.mappers.DriverMapperTest" />
+      <option name="METHOD_NAME" value="testDriverMapsCSVLine" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,6 +137,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainViewModelTest.searchSurname_Exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desktop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.harrydrummond.desktop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="me.harrydrummond.desktop" />
+      <option name="MAIN_CLASS_NAME" value="me.harrydrummond.desktop.MainViewModelTest" />
+      <option name="METHOD_NAME" value="searchSurname_Exists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Williamsf1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="me.harrydrummond.server.Williamsf1Application" />
@@ -125,6 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DriverMapperTest.testDriverMapsCSVLine" />
+        <item itemvalue="JUnit.MainViewModelTest.searchSurname_Exists" />
         <item itemvalue="Application.FXApplication" />
         <item itemvalue="JUnit.DriverRepositoryTest.testDriverRequest" />
       </list>
@@ -146,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712656762234</updated>
       <workItem from="1712656763307" duration="40000" />
-      <workItem from="1712656808104" duration="9338000" />
+      <workItem from="1712656808104" duration="10132000" />
     </task>
     <task id="LOCAL-00001" summary="Project Structure Setup">
       <option name="closed" value="true" />
@@ -180,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712665445368</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added filtering">
+      <option name="closed" value="true" />
+      <created>1712666207583</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712666207583</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +238,8 @@
     <MESSAGE value="Server module for drivers created." />
     <MESSAGE value="Frontend added and laptime parsing" />
     <MESSAGE value="Laptimes added to frontend and api endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laptimes added to frontend and api endpoint" />
+    <MESSAGE value="Added filtering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filtering" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

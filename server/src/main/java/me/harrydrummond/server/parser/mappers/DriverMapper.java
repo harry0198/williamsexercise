@@ -8,15 +8,15 @@ import java.util.Map;
 public class DriverMapper implements Mapper<Driver> {
 
     // CSV header names for each.
-    private static final String DRIVER_ID_HEADER = "driverId";
-    private static final String DRIVER_REF_HEADER = "driverRef";
-    private static final String DRIVER_NUM_HEADER = "number";
-    private static final String DRIVER_CODE_HEADER = "code";
-    private static final String DRIVER_FORENAME_HEADER = "forename";
-    private static final String DRIVER_SURNAME_HEADER = "surname";
-    private static final String DRIVER_DOB_HEADER = "dob";
-    private static final String DRIVER_NATIONALITY_HEADER = "nationality";
-    private static final String DRIVER_URL_HEADER = "url";
+    public static final String DRIVER_ID_HEADER = "driverId";
+    public static final String DRIVER_REF_HEADER = "driverRef";
+    public static final String DRIVER_NUM_HEADER = "number";
+    public static final String DRIVER_CODE_HEADER = "code";
+    public static final String DRIVER_FORENAME_HEADER = "forename";
+    public static final String DRIVER_SURNAME_HEADER = "surname";
+    public static final String DRIVER_DOB_HEADER = "dob";
+    public static final String DRIVER_NATIONALITY_HEADER = "nationality";
+    public static final String DRIVER_URL_HEADER = "url";
 
     /**
      * {@inheritDoc}
