@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Frontend added and laptime parsing">
-      <change afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/LapTimeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/repositories/DriverRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/repositories/LapTimeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/FXApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/FXApplication.java" afterDir="false" />
+    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Laptimes added to frontend and api endpoint">
       <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/DriverRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/DriverRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/test/java/me/harrydrummond/desktop/DriverRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/test/java/me/harrydrummond/desktop/DriverRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/Williamsf1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/Williamsf1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/controllers/LapTimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/controllers/LapTimeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/services/LapTimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/api/services/LapTimeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/parser/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/me/harrydrummond/server/parser/Mapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +86,7 @@
       <recent name="me.harrydrummond.desktop" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Williamsf1Application">
+  <component name="RunManager" selected="Application.FXApplication">
     <configuration name="FXApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.harrydrummond.desktop.FXApplication" />
       <module name="desktop" />
@@ -160,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712656762234</updated>
       <workItem from="1712656763307" duration="40000" />
-      <workItem from="1712656808104" duration="8303000" />
+      <workItem from="1712656808104" duration="9338000" />
     </task>
     <task id="LOCAL-00001" summary="Project Structure Setup">
       <option name="closed" value="true" />
@@ -186,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712661745946</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Laptimes added to frontend and api endpoint">
+      <option name="closed" value="true" />
+      <created>1712665445368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712665445368</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +190,8 @@
     <MESSAGE value="Project Structure Setup" />
     <MESSAGE value="Server module for drivers created." />
     <MESSAGE value="Frontend added and laptime parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Frontend added and laptime parsing" />
+    <MESSAGE value="Laptimes added to frontend and api endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laptimes added to frontend and api endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

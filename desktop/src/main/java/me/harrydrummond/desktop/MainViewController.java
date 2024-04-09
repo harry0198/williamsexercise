@@ -6,6 +6,7 @@ import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import me.harrydrummond.domain.Driver;
 import me.harrydrummond.domain.LapTime;
 
@@ -42,6 +43,8 @@ public class MainViewController {
     private TableView<LapTime> lapTimeTable;
     @FXML
     private TableView<Driver> driverTable;
+    @FXML
+    private TextField searchBox;
     private final MainViewModel viewModel;
 
     public MainViewController(MainViewModel viewModel) {
@@ -76,5 +79,8 @@ public class MainViewController {
         // Bind the items in the table to the viewmodel list.
         driverTable.setItems(viewModel.driverListProperty());
         lapTimeTable.setItems(viewModel.lapTimesListProperty());
+        searchBox.textProperty().addListener((obs, oldV, newV) -> {
+            viewModel.searchSurname(newV);
+        });
     }
 }
