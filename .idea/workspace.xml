@@ -91,7 +91,7 @@
       <recent name="me.harrydrummond.desktop" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DriverMapperTest.testDriverMapsCSVLine">
+  <component name="RunManager" selected="Application.FXApplication">
     <configuration name="FXApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.harrydrummond.desktop.FXApplication" />
       <module name="desktop" />
@@ -162,9 +162,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FXApplication" />
         <item itemvalue="JUnit.DriverMapperTest.testDriverMapsCSVLine" />
         <item itemvalue="JUnit.MainViewModelTest.searchSurname_Exists" />
-        <item itemvalue="Application.FXApplication" />
         <item itemvalue="JUnit.DriverRepositoryTest.testDriverRequest" />
       </list>
     </recent_temporary>

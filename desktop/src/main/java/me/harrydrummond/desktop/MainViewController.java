@@ -1,16 +1,12 @@
 package me.harrydrummond.desktop;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import me.harrydrummond.domain.Driver;
 import me.harrydrummond.domain.LapTime;
-
-import java.util.List;
 
 public class MainViewController {
     @FXML

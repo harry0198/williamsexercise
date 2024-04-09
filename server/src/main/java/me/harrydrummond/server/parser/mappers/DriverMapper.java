@@ -5,6 +5,9 @@ import me.harrydrummond.server.parser.Mapper;
 
 import java.util.Map;
 
+/**
+ * Mapper for converting a single CSV line to a Driver.
+ */
 public class DriverMapper implements Mapper<Driver> {
 
     // CSV header names for each.

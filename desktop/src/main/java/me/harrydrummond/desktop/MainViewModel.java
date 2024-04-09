@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Business logic for the UI. Contains bindings and methods to update
+ * state for the UI to react to.
+ */
 public class MainViewModel {
 
     private final Repository<Driver> driverRepository;
@@ -50,6 +54,10 @@ public class MainViewModel {
         }
     }
 
+    /**
+     * Updates the driver list based upon the surname. Surname can be partial (i.e. hamil -> Hamilton)
+     * @param surname To Filter results by.
+     */
     public void searchSurname(String surname) {
         this.driverSubList.setAll(drivers.stream()
                 .filter(x -> x.surname().toLowerCase().contains(surname.toLowerCase()))

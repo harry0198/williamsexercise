@@ -18,7 +18,13 @@ public class CsvParser<T> {
         this.mapper = mapper;
     }
 
+    /**
+     * Parse a string of csv text.
+     * @param csvText To parse.
+     * @return List of T after parse.
+     */
     public List<T> parse(String csvText) {
+        // Split each line by the newline char
         String[] csvLines = csvText.split("\n");
 
         // First line should always be header otherwise is invalid file. For sake of simplicity, I assume it will be
@@ -29,7 +35,7 @@ public class CsvParser<T> {
         return Arrays.stream(csvLines)
                 .skip(1)
                 .parallel() // Process each line async
-                .map(line -> mapper.map(headersToColumn, line.replaceAll("\"", "").split(SEPARATOR)))
+                .map(line -> mapper.map(headersToColumn, line.replaceAll("\"", "").split(SEPARATOR))) // Quickly just dump the quotes - data provided is safe enough for this exercise.
                 .collect(Collectors.toList());
     }
 
