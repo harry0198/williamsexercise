@@ -96,13 +96,16 @@ public class MainViewController {
             timings();
         });
 
-        viewModel.lapTimesListProperty().addListener((ListChangeListener<? super LapTime>) listener -> raceSelect.getItems().setAll(viewModel.getRaceIds()));
+        viewModel.lapTimesListProperty().addListener((ListChangeListener<? super LapTime>) listener -> {
+            raceSelect.getCheckModel().clearChecks();
+            raceSelect.getItems().setAll(viewModel.getRaceIds());
+        });
         raceSelect.getCheckModel().getCheckedItems().addListener((ListChangeListener<? super Integer>) listener -> timings());
     }
 
     private void timings() {
         timingsChart.getData().clear();
-        Map<Integer, List<LapTime>> groupedByRace = viewModel.getLapTimesGroupedByRace(raceSelect.getCheckModel().getCheckedIndices());
+        Map<Integer, List<LapTime>> groupedByRace = viewModel.getLapTimesGroupedByRace(raceSelect.getCheckModel().getCheckedItems());
         groupedByRace.forEach((race, lapTimes) -> {
             XYChart.Series<Number, Number> series = new XYChart.Series<>();
             series.setName("RaceID: " + race);

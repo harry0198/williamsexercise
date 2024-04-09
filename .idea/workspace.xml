@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Added JavaDoc and comments">
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/me/harrydrummond/server/api/repositories/InMemoryRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/me/harrydrummond/server/parser/MapperTest.java" afterDir="false" />
+    <list default="true" id="fc28c78c-8dc4-443c-8456-3513b8a0809e" name="Changes" comment="Added graphs and further testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/FXApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/FXApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/MainViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/DriverRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/DriverRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/LapTimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/LapTimeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/me/harrydrummond/desktop/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/main/resources/me/harrydrummond/desktop/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/test/java/me/harrydrummond/desktop/MainViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/test/java/me/harrydrummond/desktop/MainViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/me/harrydrummond/server/parser/mappers/DriverMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/me/harrydrummond/server/parser/mappers/DriverMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -221,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712656762234</updated>
       <workItem from="1712656763307" duration="40000" />
-      <workItem from="1712656808104" duration="17017000" />
+      <workItem from="1712656808104" duration="17819000" />
     </task>
     <task id="LOCAL-00001" summary="Project Structure Setup">
       <option name="closed" value="true" />
@@ -279,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712667644243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added graphs and further testing">
+      <option name="closed" value="true" />
+      <created>1712674330381</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712674330381</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +291,8 @@
     <MESSAGE value="Added filtering" />
     <MESSAGE value="Added tests" />
     <MESSAGE value="Added JavaDoc and comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JavaDoc and comments" />
+    <MESSAGE value="Added graphs and further testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added graphs and further testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
